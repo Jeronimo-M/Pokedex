@@ -72,6 +72,8 @@ Showing overall layout of my Pokedex with the left container showing a picture o
 
 https://lucid.app/lucidchart/invitations/accept/68b26aaf-484a-46d4-800f-8bcc7a33d0b8
 
+<img src="./priority-matrix.png" alt="priority-matrix">
+
 ## Timeframes
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
