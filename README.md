@@ -1,21 +1,14 @@
-# Pokedex
-Project 1 for SEI Topaz
-
-# Project Overview
-
-I am recreating a Pokedex which is a digital encyclopedia of Pokemon from it's database.
-
 ## Project Name
 
-I Want To Be The Very Best
+Pokedex
 
 ## Project Description
 
-The Pokedex will be fully functional like the one on the show displaying a visual of the Pokemon and it's data on one side and a list index of selectable Pokemon with buttons on the other side. You can read more about the Pokedex here: <https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9dex>
+I am recreating a Pokedex which is a digital encyclopedia of Pokemon from it's database. The Pokedex will be fully functional like the one on the show displaying a visual of the Pokemon and it's data on one side and a list index of selectable Pokemon with buttons on the other side. You can read more about the Pokedex here: <https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9dex>
 
 ## API and Data Sample
 
-I will be using the world's most used Pokemon API which averages a million calls a month. https://pokeapi.co/
+I'm using the world's most used Pokemon API which averages a million calls a month. https://pokeapi.co/
 
 ```json
 {
