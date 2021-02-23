@@ -41,6 +41,7 @@ I'm using the world's most used Pokemon API which averages a million calls a mon
 ## Wireframes
 
 Wireframe link here: https://wireframe.cc/Wuc80r
+Wireframe for mobile link here: https://wireframe.cc/iL7XrO
 
 Showing overall layout of my Pokedex with the left container showing a picture of the Pokemon with it's coresponding data. The right container will have a selectable list of Pokemon in order to choose from with buttons to navigate between pages. This container will also have a search field to directly look up Pokemon.
 
@@ -77,10 +78,14 @@ https://lucid.app/lucidchart/invitations/accept/68b26aaf-484a-46d4-800f-8bcc7a33
 | --- | :---: |  :---: | :---: | :---: |
 | HTML | M | 3hrs| N/A | N/A |
 | Working with API | M | 5hrs| N/A | N/A |
-| JavaScript | H | 10hrs | N/A | N/A |
-| CSS Styling | H | 15hrs | N/A | N/A |
+| Color Scheme in CSS | H | 5hrs | N/A | N/A |
+| Search Functionality | M | 3hrs | N/A | N/A |
+| Button Functionality | M | 3hrs | N/A | N/A |
+| Style Right Container | H | 5hrs | N/A | N/A |
+| Style Left Container | H | 5hrs | N/A | N/A |
+| Media Query | L | 2hrs | N/A | N/A |
 | Presentation Practice | L | 1hrs | N/A | N/A |
-| Total | H | 34hrs| N/A | N/A |
+| Total | H | 32hrs| N/A | N/A |
 
 ## Code Snippet
 
