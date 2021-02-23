@@ -47,9 +47,9 @@ Showing overall layout of my Pokedex with the left container showing a picture o
 
 #### MVP 
 
-- Properly display Pokemon image with it's corresponding data features once selected or searched for 
-- Mimic replica look of a Pokedex
-- Ensure all buttons are functional 
+- Display Pokemon image with it's corresponding data features once selected or searched for 
+- Mimic replica look of a [Pokedex](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9dex) 
+- Ensure navigation between Pokemon indices 
 
 #### PostMVP  
 
