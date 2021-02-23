@@ -78,16 +78,19 @@ https://lucid.app/lucidchart/invitations/accept/68b26aaf-484a-46d4-800f-8bcc7a33
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML | M | 3hrs| N/A | N/A |
-| Working with API | M | 5hrs| N/A | N/A |
+| HTML Structure| M | 3hrs| N/A | N/A |
+| Getting Data from API | M | 5hrs| N/A | N/A |
 | Color Scheme in CSS | H | 5hrs | N/A | N/A |
 | Search Functionality | M | 3hrs | N/A | N/A |
-| Button Functionality | M | 3hrs | N/A | N/A |
-| Style Right Container | H | 5hrs | N/A | N/A |
-| Style Left Container | H | 5hrs | N/A | N/A |
-| Media Query | L | 2hrs | N/A | N/A |
-| Presentation Practice | L | 1hrs | N/A | N/A |
-| Total | H | 32hrs| N/A | N/A |
+| Prev Page Button Functionality | M | 3hrs | N/A | N/A |
+| Next Page Button Functionality | M | 3hrs | N/A | N/A |
+| Style Navigation Buttons | H | 2hrs | N/A | N/A |
+| Style Search Button & Input | M | 2hrs | N/A | N/A |
+| Style Index | M | 3hrs | N/A | N/A | 
+| Style Left Container | H | 3hrs | N/A | N/A |
+| Responsive Design | H | 3hrs | N/A | N/A | 
+| Media Query | L | 3hrs | N/A | N/A |
+| Total | H | 38hrs| N/A | N/A |
 
 ## Code Snippet
 
