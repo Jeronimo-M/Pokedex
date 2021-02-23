@@ -51,10 +51,6 @@ Wireframe link here: https://wireframe.cc/Wuc80r
 
 Showing overall layout of my Pokedex with the left container showing a picture of the Pokemon with it's coresponding data. The right container will have a selectable list of Pokemon in order to choose from with buttons to navigate between pages. This container will also have a search field to directly look up Pokemon.
 
-### MVP/PostMVP
-
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
 #### MVP 
 
 - Properly display Pokemon image with it's corresponding data features once selected or searched for 
@@ -95,13 +91,9 @@ https://lucid.app/lucidchart/invitations/accept/68b26aaf-484a-46d4-800f-8bcc7a33
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+A description and snippet of code I am most proud of 
 
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+This section documents changes in my app.
