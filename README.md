@@ -17,6 +17,7 @@ The Pokedex will be fully functional like the one on the show displaying a visua
 
 I will be using the world's most used Pokemon API which averages a million calls a month. https://pokeapi.co/
 
+```json
 {
     "abilities": [
         {
@@ -42,6 +43,7 @@ I will be using the world's most used Pokemon API which averages a million calls
             "name": "bulbasaur",
             "url": "https://pokeapi.co/api/v2/pokemon-form/1/"
         }
+```
 
 ## Wireframes
 
