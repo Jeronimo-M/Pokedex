@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Global Overrides
+========================================================================== */
+
+* {
+  box-sizing: border-box;
+  border: gold solid 2px;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   Global Styles
+========================================================================== */
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.pokedex {
+  display: flex;
+  align-items: flex-end;
+  height: 500px;
+  margin: 50px;
+  width: 800px;
+}
+
+/* ==========================================================================
+  Left Container Styles 
+========================================================================== */
+
+.left-container {
+  border: 3px solid red;
+  width: 50%;
+  height: 100%;
+  flex-direction: row;
+}
+
+.left-container-screen {
+  border: 3px solid green;
+  width: 70%;
+  height: 70%;
+  margin: 50px;
+}
+
+
+
+/* ==========================================================================
+  Right Container Styles 
+========================================================================== */
+
+.right-container {
+  border: 3px solid black;
+  width: 50%;
+  height: 100%;
+  flex-direction: row;
+}  
+
+.left-container-screen {
+  border: 3px solid green;
+  width: 70%;
+  height: 70%;
+  margin: 50px;
+}
