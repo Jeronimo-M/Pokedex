@@ -54,12 +54,24 @@ body {
   border: 3px solid black;
   width: 50%;
   height: 100%;
-  flex-direction: row;
+  
 }  
 
-.left-container-screen {
-  border: 3px solid green;
+.right-screen-top {
+  border: 3px solid blue;
   width: 70%;
-  height: 70%;
+  height: 60%;
   margin: 50px;
 }
+
+/* .list-item {
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 12px;
+  height: 25px;
+  overflow-x: hidden;
+  padding-left: 5px;
+  width: 50%;
+} */
