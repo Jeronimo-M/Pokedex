@@ -25,14 +25,17 @@ async function fetchData(pokemon) {
 
 
 
+
 async function fetchPokeList() {
-  const url = `https://pokeapi.co/api/v2/pokemon/?limit=100&offset=51`
+  const url = `https://pokeapi.co/api/v2/pokemon/?limit=20&offset=0`
   
   try {
     const listResponse = await axios.get(url)
     console.log(listResponse)
-    let listData = listResponse.data.results
-    console.log(listData)
+    let pokeArray = listResponse.data.results
+    console.log(pokeArray)
+    appendPokeList(pokeArray) // invoking appendPokeList function
+
     // show data here?
     return listResponse
   } catch (err) {
@@ -40,7 +43,21 @@ async function fetchPokeList() {
   }
 }
 
-// fetchPokeList()
+fetchPokeList()
+
+function appendPokeList(pokeArray) {
+  const pokeList = document.querySelector('.right-screen-top')
+  pokeArray.forEach((pokemon) => {
+    const pokeName = document.createElement('p')
+    
+    pokeName.textContent = pokemon.name
+    console.log(pokeName)
+    console.log(pokemon.name)
+    pokeList.appendChild(pokeName)
+  }) 
+}
+
+
 
 
 /* ==========================================================================
@@ -49,10 +66,12 @@ async function fetchPokeList() {
 
 // Grab data from API and attach info to left container screen
 
+
+
 const showPokeData = (data) => {  
   
   // console.log("inside funct", data)
-    leftContainer = document.querySelector('.left-container-screen')
+    const leftContainer = document.querySelector('.left-container-screen')
     console.log(leftContainer)
 
     const pokeData = `
@@ -65,9 +84,10 @@ const showPokeData = (data) => {
         <span>Abilities: ${data.moves[0].move}
       </div>
       `
-    console.log(pokeData)
+    // console.log(pokeData)
     leftContainer.insertAdjacentHTML('beforeend', pokeData)
 }
+
 
 /* ==========================================================================
   Add Event Listeners
@@ -119,12 +139,6 @@ function removePokemon() {
 
 
 
-function app = {
-  const pokelist = getPokeList()  //return array of Pokemon []
-  const paginatedPokeList = paginatingPokeList(pokelist) //takes Poke list returns [[20], [20], [20], [20], [20]]
-  appendPokeToPage(paginatedPokeList) //takes paginated Poke list
-  const inputValue = getInputValue()
-  
-  buttonSetup(searchIndividualPokeAPICall, inputValue) //attach event listener to button  
-}
+
+
 

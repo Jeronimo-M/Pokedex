@@ -34,7 +34,7 @@ body {
   border: 3px solid red;
   width: 50%;
   height: 100%;
-  flex-direction: row;
+  
 }
 
 .left-container-screen {
@@ -52,9 +52,9 @@ body {
 
 .right-container {
   border: 3px solid black;
-  width: 50%;
-  height: 100%;
-  
+  width: calc(50% - 50px);
+  height: calc(100% - 50px);
+  padding: 20px;
 }  
 
 .right-screen-top {
@@ -62,6 +62,16 @@ body {
   width: 70%;
   height: 60%;
   margin: 50px;
+}
+
+.right-container__screen {
+  background: #43B0F2;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 15px 15px 0;
 }
 
 /* .list-item {
