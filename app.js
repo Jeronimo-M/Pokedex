@@ -25,7 +25,7 @@ async function fetchPokeData(pokemon) {
   
   try {
     const response = await axios.get(url)
-    console.log(response)
+    
     let data = response.data
     
     //Append to above DOM
