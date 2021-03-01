@@ -95,7 +95,7 @@ const listItemClick = (e) => {
   if (!listItem.textContent) return;
 
   const id = listItem.textContent.split('.')[0];
-  console.log(id)
+  
   fetchPokeData(id);
 };
 
@@ -106,7 +106,7 @@ rightButton.addEventListener('click', rightButtonClick);
 form.addEventListener('submit', (e) => {
   e.preventDefault()
   const inputValue = document.querySelector('#pokemon-search').value
-  console.log(inputValue)
+  
   fetchPokeData(inputValue)
   document.querySelector('#pokemon-search').value = ""
 })
