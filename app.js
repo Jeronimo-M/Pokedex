@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Dom 
+   Dom Objects
 ========================================================================== */
 
 const pokeListItems = document.querySelectorAll('.list-item');
@@ -12,11 +12,13 @@ const pokeWeight = document.querySelector('.poke-weight');
 const pokeHeight = document.querySelector('.poke-height');
 const leftButton = document.querySelector('.left-button');
 const rightButton = document.querySelector('.right-button');
-
+const form = document.querySelector('form')
 
 /* ==========================================================================
    Grab API 
 ========================================================================== */
+
+// Calls individual Pokemon
 
 async function fetchPokeData(pokemon) {
   const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
@@ -26,6 +28,7 @@ async function fetchPokeData(pokemon) {
     console.log(response)
     let data = response.data
     
+    //Append to above DOM
     pokeName.textContent = data['name'];
     pokeId.textContent = '#' + data['id']
     pokeWeight.textContent = data['weight'];
@@ -39,9 +42,7 @@ async function fetchPokeData(pokemon) {
   }
 }
 
-// fetchData('bulbasaur')
-
-// Grab entire list of Pokemon 
+// Grabs entire list of Pokemon 
 
 let prevUrl = null;
 let nextUrl = null;
@@ -60,8 +61,8 @@ const fetchPokeList = url => {
 
         if (resultData) {
           const { name, url } = resultData;
-          const urlArray = url.split('/');
-          const id = urlArray[urlArray.length - 2];
+          const urlArray = url.split('/'); // We split up array here 
+          const id = urlArray[urlArray.length - 2]; // Then access index -2 for "id"
           pokeListItem.textContent = id + '. ' + (name);
         } else {
           pokeListItem.textContent = '';
@@ -70,25 +71,24 @@ const fetchPokeList = url => {
     });
 };
 
-// Referenced to video https://www.youtube.com/watch?v=tFVdxGgJPCo for tips on fetchPokeList
 
+/* ==========================================================================
+   Event Listeners 
+========================================================================== */
 
-
-
-
-const handleLeftButtonClick = () => {
+const leftButtonClick = () => {
   if (prevUrl) {
     fetchPokeList(prevUrl);
   }
 };
 
-const handleRightButtonClick = () => {
+const rightButtonClick = () => {
   if (nextUrl) {
     fetchPokeList(nextUrl);
   }
 };
 
-const handleListItemClick = (e) => {
+const listItemClick = (e) => {
   if (!e.target) return;
 
   const listItem = e.target;
@@ -98,114 +98,26 @@ const handleListItemClick = (e) => {
   fetchPokeData(id);
 };
 
+leftButton.addEventListener('click', leftButtonClick);
 
-// adding event listeners
-leftButton.addEventListener('click', handleLeftButtonClick);
-rightButton.addEventListener('click', handleRightButtonClick);
+rightButton.addEventListener('click', rightButtonClick);
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const inputValue = document.querySelector('#pokemon-search').value
+  fetchPokeData(inputValue)
+  document.querySelector('#pokemon-search').value = ""
+})
+
 for (const pokeListItem of pokeListItems) {
-  pokeListItem.addEventListener('click', handleListItemClick);
+  pokeListItem.addEventListener('click', listItemClick);
 }
 
 
-// initialize App
+// URL used to start the app
 fetchPokeList('https://pokeapi.co/api/v2/pokemon?offset=0&limit=20');
 
 
-// const showPokeData = (data) => {  
-  
-//   console.log("inside funct", data)
-    
-//   console.log(leftContainer)
-
-//     // const pokeData = `
-//   pokeName.textContent = capitalize(data['name']);
-//   pokeId.textContent = '#' + data['id'].toString().padStart(3, '0');
-//   pokeWeight.textContent = data['weight'];
-//   pokeHeight.textContent = data['height'];
-//   pokeFrontImage.src = data['sprites']['front_default'] || '';
-//   pokeBackImage.src = data['sprites']['back_default'] || '';
-//       <h1 class="poke-name"> Name: ${data.name}<h1>
-//       <img class="poke-front-image" src=${data.sprites.front_default}>
-//       <img class="poke-back-image" src=${data.sprites.back_default}>
-//       <div class="details">
-//         <span>Height: ${data.height}</span>
-//         <span>Weight: ${data.weight}</span>
-//         <span>Index #: ${data.id}</span>
-//       </div>
-//       `
-//     console.log(pokeData)
-//     leftContainer.insertAdjacentHTML('beforeend', pokeData)
-// }
-
-
-/* ==========================================================================
-  Add Event Listeners
-========================================================================== */
-
-// Search Field in right container
-
-// const form = document.querySelector('form')
-// // console.log(form)
-
-// form.addEventListener('submit', (e) => {
-//   e.preventDefault()
-//   const inputValue = document.querySelector('#pokemon-search').value
-//   // console.log(inputValue)
-//   removePokemon()
-//   fetchData(inputValue)
-//   document.querySelector('#pokemon-search').value = ""
-// })
-
-// const pTags = document.querySelectorAll('p')
-// pTags.addEventListener('click', (e) => {
-//   e.preventDefault()
-//   const inputValue = document.querySelectorAll('p').value
-//   // console.log(inputValue)
-//   // removePokemon()
-//   fetchData(inputValue)
-//   document.querySelector('#pokemon-search').value = ""
-  
-// })
-
-// console.log(pTags)
-// const listItemClick = (e) => {
-//   if (!e.target) return;
-
-//   const listItem = e.target;
-//   if (!listItem.textContent) return;
-//   console.log(listItem.textContent)
-
-//   const pokemon = listItem.textContent.split('.')[0];
-//   fetchData(pokemon);
-
-//   for (const pTag of pTags) {
-//     pTags.addEventListener('click', listItemClick);
-//   }
-// }
-// const leftButton = document.querySelector('.left-button');
-// const rightButton = document.querySelector('.right-button');
-// let prevUrl = null;
-// let nextUrl = null;
-
-// const rightButtonClick = () => {
-//   if (nextUrl) {
-//     fetchPokeList(nextUrl);
-//   }
-// };
-
-// // leftButtonClick.addEventListener('click', handleLeftButtonClick);
-// rightButton.addEventListener('click', rightButtonClick);
-
-
-// // Remove previous search history
-
-// function removePokemon() {
-//   console.log(leftContainer)
-
-//   while (leftContainer.lastChild) {
-//     leftContainer.removeChild(leftContainer.lastChild)
-//   }
-// }
     
 
 
