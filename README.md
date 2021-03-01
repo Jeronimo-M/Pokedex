@@ -78,23 +78,43 @@ https://lucid.app/lucidchart/invitations/accept/68b26aaf-484a-46d4-800f-8bcc7a33
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML Structure| M | 3hrs| N/A | N/A |
-| Getting Data from API | M | 5hrs| N/A | N/A |
-| Color Scheme in CSS | H | 5hrs | N/A | N/A |
-| Search Functionality | M | 3hrs | N/A | N/A |
-| Prev Page Button Functionality | M | 3hrs | N/A | N/A |
-| Next Page Button Functionality | M | 3hrs | N/A | N/A |
-| Style Navigation Buttons | H | 2hrs | N/A | N/A |
-| Style Search Button & Input | M | 2hrs | N/A | N/A |
-| Style Index | M | 3hrs | N/A | N/A | 
-| Style Left Container | H | 3hrs | N/A | N/A |
-| Responsive Design | H | 3hrs | N/A | N/A | 
-| Media Query | L | 3hrs | N/A | N/A |
-| Total | H | 38hrs| N/A | N/A |
+| HTML Structure| M | 3hrs| 4hrs | 4hrs |
+| Getting Data from API | M | 5hrs| 5hrs | 5hrs |
+| Color Scheme in CSS | H | 5hrs | 4hrs | 4hrs |
+| Search Functionality | M | 3hrs | 3hrs | 3hrs |
+| Prev Page Button Functionality | M | 3hrs | 5hrs | 5hrs |
+| Next Page Button Functionality | M | 3hrs | 5hrs | 5hrs |
+| Style Navigation Buttons | H | 2hrs | 2hrs | 2hrs |
+| Style Search Button & Input | M | 2hrs | 2hrs | 2hrs |
+| Style Index | M | 3hrs | 3hrs | 3hrs | 
+| Style Left Container | H | 3hrs | 5hrs | 5hrs |
+| Responsive Design | H | 3hrs | 5hrs | 5hrs | 
+| Media Query | L | 3hrs | 3hrs | 3hrs |
+| Total | H | 38hrs| 46hrs | 46hrs |
 
 ## Code Snippet
 
-A description and snippet of code I am most proud of 
+``` const fetchPokeList = url => {
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      const { results, previous, next } = data;
+      prevUrl = previous;
+      nextUrl = next;
+
+      for (let i = 0; i < pokeListItems.length ; i++) {
+        const pokeListItem = pokeListItems[i];
+        const resultData = results[i];
+
+        if (resultData) {
+          const { name, url } = resultData;
+          const urlArray = url.split('/'); // We split up array here 
+          const id = urlArray[urlArray.length - 2]; // Then access index -2 for "id"
+          pokeListItem.textContent = id + '. ' + (name);
+        } else {
+          pokeListItem.textContent = ''; 
+``` 
+I appreciated this piece of code here where I was able to make my Pokemon lists be accessed 20 a time per page as stated in my MVP. It involved using the .split method to an array to get to an index needed to append to my Poke list.
 
 
 
